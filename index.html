@@ -130,6 +130,14 @@
             height: 18px;
         }
 
+        #option1,
+        #option2,
+        #option3,
+        #option4,
+        #option5 {
+            color: gray;
+        }
+
         @media screen and (orientation: landscape) {
             .nav {
                 height: 100%;
@@ -309,35 +317,35 @@
     <div class="content">
         <div class="header"></div>
 
-        <div class="container" id="uxui">
+        <div class="container" id="uxui1">
             project 1
         </div>
 
-        <div class="container" id="uxui">
+        <div class="container" id="uxui2">
             project 2
         </div>
 
-        <div class="container" id="uxui">
+        <div class="container" id="uxui3">
             project 3
         </div>
 
-        <div class="container" id="graphic">
+        <div class="container" id="graphic1">
             project 4
         </div>
 
-        <div class="container" id="graphic">
+        <div class="container" id="graphic2">
             project 5
         </div>
 
-        <div class="container" id="industrial">
+        <div class="container" id="industrial1">
             project 6
         </div>
 
-        <div class="container" id="interior">
+        <div class="container" id="interior1">
             project 7
         </div>
 
-        <div class="photo"></div>
+        <div class="photo" id="photo1"></div>
 
         <div class="info">
             <span>+389 70 277 552</span><br><br>
@@ -354,21 +362,19 @@
         </div>
 
         <div class="menu">
-            <div class="option">
+            <div class="option" id="option1">
                 <span id="span1">UX UI Design</span>
             </div>
-            <div class="option">
+            <div class="option" id="option2">
                 <span id="span2">Graphic Design</span>
             </div>
-            <div class="option">
-                <span id="span3">
-                    <a href="#industrial">Indust. Design</a>
-                </span>
+            <div class="option" id="option3">
+                <span id="span3">Industr. Design</span>
             </div>
-            <div class="option">
+            <div class="option" id="option4">
                 <span id="span4">Interior Design</span>
             </div>
-            <div class="option">
+            <div class="option" id="option5">
                 <span id="span5">About me</span>
             </div>
         </div>
@@ -628,12 +634,60 @@
                         $(".layer2").css("top", "-" + (scrolledTo / 2) + "px");
                         $(".layer3").css("top", "-" + (scrolledTo / 1.15) + "px");
                         st = $(this).scrollTop();
-                        if (st < lastScrollTop && height < width && height < 500 && scrolledTo < height) {
+                        if (st < lastScrollTop && height < width && height < 500 && scrolledTo < width / 4) {
                             $("#img").attr("src", "img/hamburger2-button.png");
                             $(".menu").css({ opacity: 0 });
                             hamburger = 0;
                         }
-                        lastScrollTop = st
+                        lastScrollTop = st;
+
+                        if (scrolledTo < ($("#uxui1").offset().top) - 0.1 * height) {
+                            $("#option1").css("color", "gray");
+                            $("#option2").css("color", "gray");
+                            $("#option3").css("color", "gray");
+                            $("#option4").css("color", "gray");
+                            $("#option5").css("color", "gray")
+                        }
+
+                        if (scrolledTo >= ($("#uxui1").offset().top) - 0.1 * height && scrolledTo < $("#uxui3").offset().top) {
+                            $("#option1").css("color", "white");
+                            $("#option2").css("color", "gray");
+                            $("#option3").css("color", "gray");
+                            $("#option4").css("color", "gray");
+                            $("#option5").css("color", "gray")
+                        }
+
+                        if (scrolledTo >= ($("#graphic1").offset().top) - 0.1 * height && scrolledTo < $("#graphic2").offset().top) {
+                            $("#option1").css("color", "gray");
+                            $("#option2").css("color", "white");
+                            $("#option3").css("color", "gray");
+                            $("#option4").css("color", "gray");
+                            $("#option5").css("color", "gray")
+                        }
+
+                        if (scrolledTo >= ($("#industrial1").offset().top) - 0.1 * height && scrolledTo < $("#industrial1").offset().top) {
+                            $("#option1").css("color", "gray");
+                            $("#option2").css("color", "gray");
+                            $("#option3").css("color", "white");
+                            $("#option4").css("color", "gray");
+                            $("#option5").css("color", "gray")
+                        }
+
+                        if (scrolledTo >= ($("#interior1").offset().top) - 0.1 * height && scrolledTo < $("#interior1").offset().top) {
+                            $("#option1").css("color", "gray");
+                            $("#option2").css("color", "gray");
+                            $("#option3").css("color", "gray");
+                            $("#option4").css("color", "white");
+                            $("#option5").css("color", "gray")
+                        }
+
+                        if (scrolledTo >= ($("#photo1").offset().top) - 0.1 * height) {
+                            $("#option1").css("color", "gray");
+                            $("#option2").css("color", "gray");
+                            $("#option3").css("color", "gray");
+                            $("#option4").css("color", "gray");
+                            $("#option5").css("color", "white")
+                        }
                     }
                 );
 
@@ -648,7 +702,7 @@
                                 $("#img").attr("src", "img/close-button.png");
                                 hamburger = 1;
                                 if (scrolledTo < height) {
-                                    $("html, body").animate({ scrollTop: 0.54 * width }, 2000);
+                                    $("html, body").animate({ scrollTop: ($("#uxui1").offset().top) - 0.1 * height + 1 }, 2000);
                                 }
                             }
                             else {
@@ -673,6 +727,42 @@
                                 hamburger = 0;
                             }
                         }
+                    }
+                );
+
+                $("#span1").click(
+                    function () {
+                        $('html, body').animate({ scrollTop: ($("#uxui1").offset().top) - 0.1 * height + 1 }, 2000);
+                    }
+                );
+
+                $("#span2").click(
+                    function () {
+                        $('html, body').animate({ scrollTop: ($("#graphic1").offset().top) - 0.1 * height + 1 }, 2000);
+                    }
+                );
+
+                $("#span3").click(
+                    function () {
+                        $('html, body').animate({ scrollTop: ($("#industrial1").offset().top) - 0.1 * height + 1 }, 2000);
+                    }
+                );
+
+                $("#span4").click(
+                    function () {
+                        $('html, body').animate({ scrollTop: ($("#interior1").offset().top) - 0.1 * height + 1 }, 2000);
+                    }
+                );
+
+                $("#span5").click(
+                    function () {
+                        $('html, body').animate({ scrollTop: ($("#photo1").offset().top) + height + 1 }, 2000);
+                    }
+                );
+
+                $("#name").click(
+                    function () {
+                        $('html, body').animate({ scrollTop: 0 }, 2000);
                     }
                 );
             }
