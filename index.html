@@ -58,6 +58,20 @@
 
         }
 
+        #industrial1 {
+            background-image: url("img/industrial.jpg");
+            background-attachment: local;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #interior1 {
+            background-image: url("img/interior.png");
+            background-attachment: local;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
         .photo {
             background-image: url("img/profile.jpg");
             background-repeat: no-repeat;
@@ -136,6 +150,15 @@
         #option4,
         #option5 {
             color: gray;
+        }
+
+        #span1,
+        #span2,
+        #span3,
+        #span4,
+        #span5,
+        #name {
+            cursor: pointer;
         }
 
         @media screen and (orientation: landscape) {
@@ -337,12 +360,12 @@
             project 5
         </div>
 
-        <div class="container" id="industrial1">
-            project 6
+        <div class="container" id="industrial1" onclick="window.open('img/industrial.pdf')" style="cursor:pointer;">
+
         </div>
 
-        <div class="container" id="interior1">
-            project 7
+        <div class="container" id="interior1" onclick="window.open('img/interior.pdf')" style="cursor:pointer;">
+
         </div>
 
         <div class="photo" id="photo1"></div>
