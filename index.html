@@ -58,7 +58,6 @@
             font-size: 40px;
             font-family: roboto;
             color: #999999;
-            background-color: #818181;
 
         }
 
@@ -108,8 +107,6 @@
             text-decoration: none;
         }
 
-
-
         .nav {
             bottom: 0px;
             position: fixed;
@@ -155,6 +152,23 @@
         .slider img {
             object-fit: contain;
             width: 100%;
+        }
+
+        .slider video {
+            object-fit: contain;
+            width: 100%;
+        }
+
+        #uxui3a {
+            font-size: 15px;
+            height: 25px;
+            padding-top: 5px;
+            font-family: roboto;
+        }
+
+        span#landing {
+            border: 1px solid gray;
+            padding: 5px 20px 7px 20px;
         }
 
         @media screen and (orientation: landscape) {
@@ -212,6 +226,10 @@
                 margin-top: 10vw;
             }
 
+            #uxui3a {
+                height: 25px;
+            }
+
             .slider img {
                 height: calc((100vw - 140px) * 0.49);
             }
@@ -246,7 +264,15 @@
                     margin-top: 10vw;
                 }
 
+                #uxui3a {
+                    height: 25px;
+                }
+
                 .slider img {
+                    height: calc((100vw - 140px) * 0.37);
+                }
+
+                .slider video {
                     height: calc((100vw - 140px) * 0.37);
                 }
 
@@ -261,6 +287,10 @@
                 margin-left: 10%;
                 width: 80vw;
                 height: 49vw;
+            }
+
+            #uxui3a {
+                height: 25px;
             }
 
             .slider img {
@@ -355,12 +385,37 @@
         </div>
 
         <div class="container" id="uxui2">
-            project 2
+            <div class="slider">
+                <div><img src="img/map1.png"></div>
+                <div>
+                    <video controls>
+                        <source src="img/map mobile.mov" type="video/mp4">
+                    </video>
+                </div>
+                <div>
+                    <video controls>
+                        <source src="img/map desktop.mov" type="video/mp4">
+                    </video>
+                </div>
+                <div><img src="img/map4.png"></div>
+                <div><img src="img/map5.png"></div>
+                <div><img src="img/map6.jpg"></div>
+                <div><img src="img/map7.jpg"></div>
+            </div>
         </div>
 
         <div class="container" id="uxui3">
             <img src="img/frontend.jpg" width="100%">
         </div>
+
+        <div class="container" id="uxui3a">
+            <a href="https://xd.adobe.com/view/768c1690-0e80-4b97-ab76-dce56e9d7c07-23df/" target="_blank">
+                <span id="landing">
+                    Landing page prototype
+                </span>
+            </a>
+        </div>
+
 
         <div class="container" id="uxui4">
             <div class="slider">
@@ -502,6 +557,9 @@
                             width: (widthres - 140) * 0.8,
                             height: ((widthres - 140) * 0.8) * 0.62
                         });
+                        $("#uxui3a").css({
+                            height: 25
+                        })
                         $(".slider").css({
                             height: ((widthres - 140) * 0.8) * 0.62
                         })
@@ -593,6 +651,9 @@
                                 marginBottom: 0,
                                 marginTop: 0.1 * widthres
                             });
+                            $("#uxui3a").css({
+                                height: 25
+                            })
                             $(".slider").css({
                                 height: ((widthres - 140) * 0.6) * 0.62
                             })
@@ -608,6 +669,9 @@
                             width: 0.8 * widthres,
                             height: 0.49 * widthres
                         });
+                        $("#uxui3a").css({
+                            height: 25
+                        })
                         $(".slider").css({
                             height: 0.49 * widthres
                         })
