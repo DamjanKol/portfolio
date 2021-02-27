@@ -223,7 +223,7 @@
                 margin-left: calc((100% – 140px) * 0.1 + 140px);
                 margin-right: calc((100% – 140px) * 0.1);
                 margin-bottom: 0px;
-                margin-top: 20vw;
+                margin-top: calc((100% - 140px) * 0.8 * 0.5);
             }
 
             #uxui3 {
@@ -269,11 +269,11 @@
                     margin-left: calc((100% – 140px) * 0.2 + 140px);
                     margin-right: calc((100% – 140px) * 0.2);
                     margin-bottom: 0px;
-                    margin-top: 20vw;
+                    margin-top: calc((100% - 140px) * 0.6 *0.5);
                 }
 
                 #uxui3 {
-                    height: calc((100% - 140px) * 0.6) * 0.5;
+                    height: calc((100% - 140px) * 0.6 * 0.5);
                 }
 
                 #uxui3a {
@@ -293,7 +293,7 @@
 
         @media screen and (orientation: portrait) {
             .container {
-                margin-top: 20vw;
+                margin-top: calc(80vw * 0.5);
                 margin-right: 10%;
                 margin-bottom: 10vw;
                 margin-left: 10%;
@@ -486,7 +486,7 @@
         </div>
 
         <div class="container" id="industrial1">
-            3d Modeling, Tech. drawing, Simulating
+            3D Modeling, Tech. drawing, Simulating
             <div class="slider">
                 <div><img src="img/industrial1.jpg"></div>
                 <div><img src="img/industrial2.png"></div>
@@ -595,7 +595,7 @@
                     widthres = document.body.clientWidth;
                     if (heightres < widthres) {
                         $(".container").css({
-                            marginTop: 0.2 * widthres,
+                            marginTop: (widthres - 140) * 0.8 * 0.5,
                             marginLeft: (widthres - 140) * 0.1 + 140,
                             marginBottom: 0,
                             marginRight: (widthres - 140) * 0.1,
@@ -697,7 +697,7 @@
                                 marginLeft: (widthres - 140) * 0.2 + 140,
                                 marginRight: (widthres - 140) * 0.2,
                                 marginBottom: 0,
-                                marginTop: 0.2 * widthres
+                                marginTop: (widthres - 140) * 0.6 * 0.5
                             });
                             $("#uxui3").css({
                                 height: (widthres - 140) * 0.6 * 0.5
@@ -713,7 +713,7 @@
                     }
                     else {
                         $(".container").css({
-                            marginTop: 0.2 * widthres,
+                            marginTop: 0.8 * widthres * 0.5,
                             marginRight: 0.1 * widthres,
                             marginBottom: 0.1 * widthres,
                             marginLeft: 0.1 * widthres,
