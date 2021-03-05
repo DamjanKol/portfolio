@@ -567,6 +567,14 @@
         $(document).ready(
             function () {
                 $(window).scrollTop(0, 0);
+
+                $('.slick-slide>img')
+                    .wrap('<span style="display:inline-block"></span>')
+                    .css('display', 'block')
+                    .parent()
+                    .zoom();
+
+
                 height = $(window).height();
                 width = $(window).width();
                 if (height < width) {
