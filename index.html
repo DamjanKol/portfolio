@@ -553,7 +553,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="slick.min.js"></script>
-    <script src="jquery.zoom.min.js"></script>
+    <script src="jquery.zoom.js"></script>
     <script src="main.js"></script>
     <script>
 
@@ -569,11 +569,7 @@
             function () {
                 $(window).scrollTop(0, 0);
 
-                $('.slick-slide>img')
-                    .wrap('<span style="display:inline-block"></span>')
-                    .css('display', 'block')
-                    .parent()
-                    .zoom();
+
 
 
                 height = $(window).height();
@@ -621,7 +617,7 @@
                         $("#uxui3a").css({
                             height: 25
                         })
-                        $(".slider, .slider img, .slider video").css({
+                        $(".slider,  .slider video").css({
                             height: ((widthres - 140) * 0.8) * 0.62
                         })
                         $(".nav").css({
@@ -718,7 +714,7 @@
                             $("#uxui3a").css({
                                 height: 25
                             })
-                            $(".slider, .slider img, .slider video").css({
+                            $(".slider,  .slider video").css({
                                 height: ((widthres - 140) * 0.6) * 0.62
                             })
                             hamburger = 1;
@@ -739,7 +735,7 @@
                         $("#uxui3a").css({
                             height: 25
                         })
-                        $(".slider, .slider img, .slider video").css({
+                        $(".slider,  .slider video").css({
                             height: 0.49 * widthres
                         })
                         $(".option").css({
