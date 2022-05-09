@@ -237,6 +237,11 @@
             #uxui3b {
                 height: 150px;
             }
+            
+            #uxui0,
+            #uxui5 {
+                height: calc((100vw - 140px) * 0.49 + 100px);
+            }
 
             .slider img {
                 height: calc((100vw - 140px) * 0.49);
@@ -284,6 +289,11 @@
                 #uxui3b {
                     height: 150px;
                 }
+                
+                #uxui0,
+                #uxui5 {
+                    height: calc((100vw - 140px) * 0.37 + 100px);
+                }
 
                 .slider img {
                     height: calc((100vw - 140px) * 0.37);
@@ -313,6 +323,11 @@
             #uxui3a,
             #uxui3b {
                 height: 150px;
+            }
+            
+            #uxui0,
+            #uxui5 {
+                height: calc(49vw + 100px);
             }
 
             .slider img {
@@ -426,7 +441,7 @@
             </a> 
         </div>
         
-        <div class="container" id="uxui4">
+        <div class="container" id="uxui5">
             Parking App <br><br>
             <div class="slider">
                 <div><img src="img/parking1.png"></div>
@@ -676,6 +691,9 @@
                         $("#uxui3a, #uxui3b").css({
                             height: 150
                         })
+                        $("#uxui0, #uxui5").css({
+                            height: ((widthres - 140) * 0.8) * 0.62 + 100
+                        })
                         $(".slider,  .slider video").css({
                             height: ((widthres - 140) * 0.8) * 0.62
                         })
@@ -773,6 +791,9 @@
                             $("#uxui3a, #uxui3b").css({
                                 height: 150
                             })
+                            $("#uxui0, #uxui5").css({
+                                height: ((widthres - 140) * 0.6) * 0.62 + 100
+                            })
                             $(".slider,  .slider video").css({
                                 height: ((widthres - 140) * 0.6) * 0.62
                             })
@@ -793,6 +814,9 @@
                         })
                         $("#uxui3a, #uxui3b").css({
                             height: 150
+                        })
+                        $("#uxui0, #uxui5").css({
+                            height: 0.49 * widthres = 100
                         })
                         $(".slider,  .slider video").css({
                             height: 0.49 * widthres
